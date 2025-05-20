@@ -1,0 +1,114 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #fffaf3;
+}
+
+.full-screen {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.center-box {
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.logo {
+  width: 180px;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 900;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 18px;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.login-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.login-button {
+  height: 48px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-button:focus,
+.login-button:focus-visible {
+    border: none;
+    outline: none;
+}
+
+.login-button:hover{
+    opacity: 0.7;
+}
+
+.login-button img {
+  height: 24px;
+  margin-right: 10px;
+}
+
+.google {
+  background-color: #ffffff;
+}
+
+.kakao {
+  background-color: #fee500;
+}
+
+.naver {
+  background-color: #03c75a;
+  color: white;
+}
+
+@keyframes splashFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.logo {
+  width: 200px;
+  margin-bottom: 1rem;
+  animation: splashFadeIn 1.2s ease-in-out forwards;
+}
+
+.splash-container {
+  opacity: 0;
+  animation: fadeInContainer 1.2s ease-in forwards;
+}
+
+@keyframes fadeInContainer {
+  to {
+    opacity: 1;
+  }
+}
